@@ -27,7 +27,20 @@ class SearchPage extends StatelessWidget {
                     .fetchMovieSearch(query);
               },
               decoration: InputDecoration(
-                hintText: 'Search title',
+                hintText: 'Search Movie',
+                prefixIcon: Icon(Icons.search),
+                border: OutlineInputBorder(),
+              ),
+              textInputAction: TextInputAction.search,
+            ),
+            SizedBox(height: 16),
+            TextField(
+              onSubmitted: (query) {
+                Provider.of<TvSearchNotifier>(context, listen: false)
+                    .fetchTVSearch(query);
+              },
+              decoration: InputDecoration(
+                hintText: 'Search TV Series',
                 prefixIcon: Icon(Icons.search),
                 border: OutlineInputBorder(),
               ),

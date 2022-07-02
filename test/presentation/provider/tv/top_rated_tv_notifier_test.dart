@@ -28,13 +28,14 @@ void main() {
     backdropPath: 'backdropPath',
     genreIds: [1, 2, 3],
     id: 1,
-    originalName: 'originalTitle',
+    original_name: 'originalTitle',
     overview: 'overview',
     popularity: 1,
-    posterPath: 'posterPath',
-    firstAirDate:  'releaseDate',
+    poster_path: 'posterPath',
+    first_air_date:  'releaseDate',
     name : 'title',
     voteAverage: 1,
+    original_language: 'EN',
     voteCount: 1,
   );
 

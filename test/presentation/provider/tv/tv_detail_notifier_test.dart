@@ -5,7 +5,6 @@ import 'package:ditonton/domain/entities/tv/tv.dart';
 import 'package:ditonton/domain/usecases/tv/get_tv_detail.dart';
 import 'package:ditonton/domain/usecases/tv/get_tv_recommendations.dart';
 import 'package:ditonton/domain/usecases/tv/get_watchlist_status.dart';
-import 'package:ditonton/domain/usecases/tv/get_watchlist_tv.dart';
 import 'package:ditonton/domain/usecases/tv/remove_watchlist.dart';
 import 'package:ditonton/domain/usecases/tv/save_watchlist.dart';
 import 'package:ditonton/presentation/provider/tv/tv_detail_notifier.dart';
@@ -39,11 +38,11 @@ void main() {
     mockSaveWatchlist = MockSaveWatchlist();
     mockRemoveWatchlist = MockRemoveWatchlist();
     provider = TvDetailNotifier(
-      getTVDetail: mockGetTVDetail,
-      getTVRecommendations: mockGetTVRecommendations,
-      getWatchListStatus: mockGetWatchlistStatus,
-      saveWatchlist: mockSaveWatchlist,
-      removeWatchlist: mockRemoveWatchlist,
+      getTvDetail: mockGetTVDetail,
+      getTvRecommendations: mockGetTVRecommendations,
+      getWatchListStatusTv: mockGetWatchlistStatus,
+      saveWatchlistTv: mockSaveWatchlist,
+      removeWatchlistTv: mockRemoveWatchlist,
     )..addListener(() {
         listenerCallCount += 1;
       });
@@ -55,14 +54,15 @@ void main() {
     backdropPath: 'backdropPath',
     genreIds: [1, 2, 3],
     id: 1,
-    originalName: 'originalTitle',
+    original_name: 'originalTitle',
     overview: 'overview',
     popularity: 1,
-    posterPath: 'posterPath',
-    firstAirDate:  'releaseDate',
+    poster_path: 'posterPath',
+    first_air_date:  'releaseDate',
     name : 'title',
     voteAverage: 1,
     voteCount: 1,
+    original_language: 'EN',
   );
   final tTVs = <Tv>[tTV];
 
@@ -172,7 +172,7 @@ void main() {
       // act
       await provider.addWatchlist(testTvDetail);
       // assert
-      verify(mockSaveWatchlist.execute(testTvDetail));
+      verify(mockSaveWatchlist.call(testTvDetail));
     });
 
     test('should execute remove watchlist when function called', () async {

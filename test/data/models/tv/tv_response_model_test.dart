@@ -11,12 +11,13 @@ void main() {
     backdropPath: 'backdropPath',
     genreIds: [1, 2, 3],
     id: 1,
-    originalName: 'originalname',
+    original_name: 'originalname',
     overview: 'overview',
     popularity: 1,
-    posterPath: 'poster_path',
-    firstAirDate: 'first_air_date',
+    poster_path: 'poster_path',
+    first_air_date: 'first_air_date',
     name: 'name',
+    original_language:  'original_language',
     voteAverage: 1,
     voteCount: 1,
   );
@@ -26,7 +27,7 @@ void main() {
     test('should return a valid model from JSON', () async {
       // arrange
       final Map<String, dynamic> jsonMap =
-          json.decode(readJson('dummy_data/now_playingtv.json'));
+          json.decode(readJson('dummy_data/now_playing_tv.json'));
       // act
       final result = TvResponse.fromJson(jsonMap);
       // assert

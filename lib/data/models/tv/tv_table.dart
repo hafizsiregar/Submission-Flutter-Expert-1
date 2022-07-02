@@ -39,7 +39,7 @@ class TvTable extends Equatable {
   Tv toEntity() => Tv.watchlist(
         id: id,
         name: name,
-        posterPath: posterPath,
+        poster_path: posterPath,
         overview: overview,
       );
 

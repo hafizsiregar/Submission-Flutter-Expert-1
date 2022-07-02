@@ -51,12 +51,12 @@ class MockTVDetailNotifier extends _i1.Mock
       (super.noSuchMethod(Invocation.getter(#getTVDetail),
           returnValue: _FakeGetTVDetail()) as _i2.GetTvDetail);
   @override
-  _i3.GetTvRecommendations get getTVRecommendations =>
+  _i3.GetTvRecommendations get getTvRecommendations =>
       (super.noSuchMethod(Invocation.getter(#getTVRecommendations),
               returnValue: _FakeGetTVRecommendations())
           as _i3.GetTvRecommendations);
   @override
-  _i4.GetWatchlistStatusTv get getWatchListTvStatus =>
+  _i4.GetWatchlistStatusTv get getWatchListStatusTv =>
       (super.noSuchMethod(Invocation.getter(#getWatchListStatus),
           returnValue: _FakeGetWatchListStatus()) as _i4.GetWatchlistStatusTv);
   @override
@@ -64,7 +64,7 @@ class MockTVDetailNotifier extends _i1.Mock
       (super.noSuchMethod(Invocation.getter(#saveWatchlist),
           returnValue: _FakeSaveWatchlist()) as _i5.SaveWatchlistTv);
   @override
-  _i6.RemoveWatchlistTv get removeWatchlistTV =>
+  _i6.RemoveWatchlistTv get removeWatchlistTv =>
       (super.noSuchMethod(Invocation.getter(#removeWatchlist),
           returnValue: _FakeRemoveWatchlist()) as _i6.RemoveWatchlistTv);
   @override
@@ -99,7 +99,7 @@ class MockTVDetailNotifier extends _i1.Mock
       (super.noSuchMethod(Invocation.getter(#hasListeners), returnValue: false)
           as bool);
   @override
-  _i11.Future<void> fetchTVDetail(int? id) =>
+  _i11.Future<void> fetchTvDetail(int? id) =>
       (super.noSuchMethod(Invocation.method(#fetchTVDetail, [id]),
           returnValue: Future<void>.value(),
           returnValueForMissingStub: Future.value()) as _i11.Future<void>);

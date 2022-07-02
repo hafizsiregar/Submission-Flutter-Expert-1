@@ -99,7 +99,7 @@ class MockSaveWatchlist extends _i1.Mock implements _i11.SaveWatchlistTv {
       (super.noSuchMethod(Invocation.getter(#repository),
           returnValue: _FakeTvRepository()) as _i2.TvRepository);
   @override
-  _i5.Future<_i3.Either<_i6.Failure, String>> execute(_i7.TvDetail? tv) =>
+  _i5.Future<_i3.Either<_i6.Failure, String>> call(_i7.TvDetail? tv) =>
       (super.noSuchMethod(Invocation.method(#execute, [tv]),
               returnValue: Future<_i3.Either<_i6.Failure, String>>.value(
                   _FakeEither<_i6.Failure, String>()))

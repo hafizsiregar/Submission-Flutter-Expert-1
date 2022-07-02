@@ -3,6 +3,7 @@ import 'package:ditonton/presentation/pages/movie/nowplay_movie_page.dart';
 import 'package:ditonton/presentation/pages/tv/nowplay_tv_page.dart';
 import 'package:ditonton/presentation/pages/tv/popular_tv_page.dart';
 import 'package:ditonton/presentation/pages/tv/top_rated_tv_page.dart';
+import 'package:ditonton/presentation/pages/tv/tv_page.dart';
 import 'package:ditonton/presentation/pages/tv/watchlist_tv_page.dart';
 import 'package:flutter/material.dart';
 import '../presentation/pages/about_page.dart';
@@ -50,6 +51,10 @@ class AppRoute {
       case PopularMoviesPage.routeName:
         return MaterialPageRoute(
           builder: (context) => PopularMoviesPage()
+      );
+      case TvPage.routeName:
+        return MaterialPageRoute(
+          builder: (context) => TvPage()
       );
       case NowplayingTvPage.routeName:
         return MaterialPageRoute(

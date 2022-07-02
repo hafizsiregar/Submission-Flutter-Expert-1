@@ -12,18 +12,18 @@ class TvDetailNotifier extends ChangeNotifier {
   static const watchlistAddSuccessMessage = 'Added to Watchlist';
   static const watchlistRemoveSuccessMessage = 'Removed from Watchlist';
 
-  final GetTvDetail getTVDetail;
-  final GetTvRecommendations getTVRecommendations;
-  final GetWatchlistStatusTv getWatchListStatus;
-  final SaveWatchlistTv saveWatchlist;
-  final RemoveWatchlistTv removeWatchlist;
+  final GetTvDetail getTvDetail;
+  final GetTvRecommendations getTvRecommendations;
+  final GetWatchlistStatusTv getWatchListStatusTv;
+  final SaveWatchlistTv saveWatchlistTv;
+  final RemoveWatchlistTv removeWatchlistTv;
 
   TvDetailNotifier({
-    required this.getTVDetail,
-    required this.getTVRecommendations,
-    required this.getWatchListStatus,
-    required this.saveWatchlist,
-    required this.removeWatchlist,
+    required this.getTvDetail,
+    required this.getTvRecommendations,
+    required this.getWatchListStatusTv,
+    required this.saveWatchlistTv,
+    required this.removeWatchlistTv,
   });
 
   late TvDetail _tv;
@@ -47,8 +47,8 @@ class TvDetailNotifier extends ChangeNotifier {
   Future<void> fetchTvDetail(int id) async {
     _tvState = RequestState.Loading;
     notifyListeners();
-    final detailResult = await getTVDetail.call(id);
-    final recommendationResult = await getTVRecommendations.call(id);
+    final detailResult = await getTvDetail.call(id);
+    final recommendationResult = await getTvRecommendations.call(id);
     detailResult.fold(
       (failure) {
         _tvState = RequestState.Error;
@@ -79,7 +79,7 @@ class TvDetailNotifier extends ChangeNotifier {
   String get watchlistMessage => _watchlistMessage;
 
   Future<void> addWatchlist(TvDetail tv) async {
-    final result = await saveWatchlist.call(tv);
+    final result = await saveWatchlistTv.call(tv);
 
     await result.fold(
       (failure) async {
@@ -94,7 +94,7 @@ class TvDetailNotifier extends ChangeNotifier {
   }
 
   Future<void> removeFromWatchlist(TvDetail tv) async {
-    final result = await removeWatchlist.call(tv);
+    final result = await removeWatchlistTv.call(tv);
 
     await result.fold(
       (failure) async {
@@ -109,7 +109,7 @@ class TvDetailNotifier extends ChangeNotifier {
   }
 
   Future<void> loadWatchlistStatus(int id) async {
-    final result = await getWatchListStatus.call(id);
+    final result = await getWatchListStatusTv.call(id);
     _isAddedtoWatchlist = result;
     notifyListeners();
   }

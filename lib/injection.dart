@@ -103,11 +103,11 @@ void init() {
   );
   locator.registerFactory(
         () => TvDetailNotifier(
-      getTVDetail: locator(),
-      getTVRecommendations: locator(),
-      getWatchListStatus: locator(),
-      saveWatchlist: locator(),
-      removeWatchlist: locator(),
+      getTvDetail: locator(),
+      getTvRecommendations: locator(),
+      getWatchListStatusTv: locator(),
+      saveWatchlistTv: locator(),
+      removeWatchlistTv: locator(),
     ),
   );
   locator.registerFactory(

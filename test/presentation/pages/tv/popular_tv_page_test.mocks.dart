@@ -30,7 +30,7 @@ class MockPopularTvNotifier extends _i1.Mock
   }
 
   @override
-  _i2.GetPopularTv get getPopularTV =>
+  _i2.GetPopularTv get getPopularTv =>
       (super.noSuchMethod(Invocation.getter(#getPopularTV),
           returnValue: _FakeGetPopularTv()) as _i2.GetPopularTv);
   @override
@@ -48,7 +48,7 @@ class MockPopularTvNotifier extends _i1.Mock
       (super.noSuchMethod(Invocation.getter(#hasListeners), returnValue: false)
           as bool);
   @override
-  _i6.Future<void> fetchPopularTV() =>
+  _i6.Future<void> fetchPopularTv() =>
       (super.noSuchMethod(Invocation.method(#fetchPopularTV, []),
           returnValue: Future<void>.value(),
           returnValueForMissingStub: Future.value()) as _i6.Future<void>);

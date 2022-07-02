@@ -30,30 +30,32 @@ void main() {
     backdropPath: '/muth4OYamXf41G2evdrLEg8d3om.jpg',
     genreIds: [14, 28],
     id: 557,
-    originalName: 'Spider-Man',
+    original_name: 'Spider-Man',
     overview:
         'After being bitten by a genetically altered spider, nerdy high school student Peter Parker is endowed with amazing powers to become the Amazing superhero known as Spider-Man.',
     popularity: 60.441,
-    posterPath: '/rweIrveL43TaxUN0akQEaAXL6x0.jpg',
-    firstAirDate: '2002-05-01',
+    poster_path: '/rweIrveL43TaxUN0akQEaAXL6x0.jpg',
+    first_air_date: '2002-05-01',
     name: 'Spider-Man',
     voteAverage: 7.2,
     voteCount: 13507,
+    original_language: 'EN'
   );
 
   final tTV = Tv(
     backdropPath: '/muth4OYamXf41G2evdrLEg8d3om.jpg',
     genreIds: [14, 28],
     id: 557,
-    originalName: 'Spider-Man',
+    original_name: 'Spider-Man',
     overview:
         'After being bitten by a genetically altered spider, nerdy high school student Peter Parker is endowed with amazing powers to become the Amazing superhero known as Spider-Man.',
     popularity: 60.441,
-    posterPath: '/rweIrveL43TaxUN0akQEaAXL6x0.jpg',
-    firstAirDate: '2002-05-01',
+    poster_path: '/rweIrveL43TaxUN0akQEaAXL6x0.jpg',
+    first_air_date: '2002-05-01',
     name: 'Spider-Man',
     voteAverage: 7.2,
     voteCount: 13507,
+    original_language: 'EN'
   );
 
   final tTVModelList = <TvModel>[tTVModel];
@@ -280,7 +282,7 @@ void main() {
     });
   });
 
-  group('Seach TV', () {
+  group('Search TV', () {
     final tQuery = 'spiderman';
 
     test('should return tv list when call to data source is successful',

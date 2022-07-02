@@ -84,16 +84,16 @@ class MockTvRepository extends _i1.Mock implements _i6.TvRepository {
               _FakeEither<_i8.Failure, List<_i9.Tv>>())) as _i7
           .Future<_i2.Either<_i8.Failure, List<_i9.Tv>>>);
   @override
-  _i7.Future<_i2.Either<_i8.Failure, String>> saveWatchlist(
-      _i10.TvDetail? Tv) =>
-      (super.noSuchMethod(Invocation.method(#saveWatchlist, [Tv]),
+  _i7.Future<_i2.Either<_i8.Failure, String>> saveWatchlistTv(
+      _i10.TvDetail? tvDetail) =>
+      (super.noSuchMethod(Invocation.method(#saveWatchlist, [tvDetail]),
           returnValue: Future<_i2.Either<_i8.Failure, String>>.value(
               _FakeEither<_i8.Failure, String>()))
       as _i7.Future<_i2.Either<_i8.Failure, String>>);
   @override
-  _i7.Future<_i2.Either<_i8.Failure, String>> removeWatchlist(
-      _i10.TvDetail? Tv) =>
-      (super.noSuchMethod(Invocation.method(#removeWatchlist, [Tv]),
+  _i7.Future<_i2.Either<_i8.Failure, String>> removeWatchlistTv(
+      _i10.TvDetail? tvDetail) =>
+      (super.noSuchMethod(Invocation.method(#removeWatchlist, [tvDetail]),
           returnValue: Future<_i2.Either<_i8.Failure, String>>.value(
               _FakeEither<_i8.Failure, String>()))
       as _i7.Future<_i2.Either<_i8.Failure, String>>);
@@ -164,12 +164,12 @@ class MockTvLocalDataSource extends _i1.Mock
   }
 
   @override
-  _i7.Future<String> insertWatchlistTv(_i14.TvTable? Tv) =>
-      (super.noSuchMethod(Invocation.method(#insertWatchlist, [Tv]),
+  _i7.Future<String> insertWatchlistTv(_i14.TvTable? table) =>
+      (super.noSuchMethod(Invocation.method(#insertWatchlistTv, [table]),
           returnValue: Future<String>.value('')) as _i7.Future<String>);
   @override
-  _i7.Future<String> removeWatchlistTv(_i14.TvTable? Tv) =>
-      (super.noSuchMethod(Invocation.method(#removeWatchlist, [Tv]),
+  _i7.Future<String> removeWatchlistTv(_i14.TvTable? table) =>
+      (super.noSuchMethod(Invocation.method(#removeWatchlist, [table]),
           returnValue: Future<String>.value('')) as _i7.Future<String>);
   @override
   _i7.Future<_i14.TvTable?> getTvById(int? id) =>
@@ -181,10 +181,6 @@ class MockTvLocalDataSource extends _i1.Mock
       Invocation.method(#getWatchlistTv, []),
       returnValue: Future<List<_i14.TvTable>>.value(<_i14.TvTable>[]))
   as _i7.Future<List<_i14.TvTable>>);
-  @override
-  _i7.Future<String> insertWatchlist(_i14.TvTable? tvTable) =>
-      (super.noSuchMethod(Invocation.method(#insertWatchlistTv, [tvTable]),
-          returnValue: Future<String>.value('')) as _i7.Future<String>);
 }
 
 /// A class which mocks [DatabaseHelper].
